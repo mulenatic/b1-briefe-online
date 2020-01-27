@@ -42,7 +42,6 @@ export default class LetterCard extends Component {
 		</CardContent>
 	      </Collapse>
 	    </Card>
-
 	)
     }
 
