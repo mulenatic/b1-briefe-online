@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { CardHeader, CardContent, Typography, Card, CardActions, IconButton, Collapse } from "@material-ui/core";
+import { CardHeader, CardContent, Typography, Card, CardActions, IconButton, Collapse, Link } from "@material-ui/core";
 import { ExpandMore, ExpandLess } from "@material-ui/icons";
 
 const ExpandIcon = ({ expanded }) =>
@@ -33,7 +33,7 @@ export default class LetterCard extends Component {
     render() {
 	return (
 	    <Card variant="outlined">
-	      <CardHeader title={this.props.letterData.title} subheader={ this.generateSubheader(this.props.letterData) }/>
+	      <CardHeader title={this.props.letterData.title} subheader={ this.generateSubheader(this.props.letterData) } />
 	      <CardContent>
 		<Typography dangerouslySetInnerHTML={this.createMarkup(this.props.letterData.problem)}>
 		</Typography>

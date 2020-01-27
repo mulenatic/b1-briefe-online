@@ -18,7 +18,7 @@ class App extends Component {
     async componentDidMount() {
 
 	try {
-	    const data = await fetch('LettersUTF8.json');
+	    const data = await fetch('Letters.json');
 	    const dataJSON = await data.json();
 
 	    if (dataJSON) {
