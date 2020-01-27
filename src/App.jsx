@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core';
+import 'typeface-roboto';
+import MenuIcon from "@material-ui/icons/Menu";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div >
+	<AppBar position="static">
+	  <Toolbar>
+	    <IconButton edge="start"  color="inherit" aria-label="menu">
+	      <MenuIcon />
+	    </IconButton>
+	    <Typography variant="h6" >
+	      B1 Briefe Online
+	    </Typography>
+	  </Toolbar>
+	</AppBar>
+      </div>
   );
 }
 
