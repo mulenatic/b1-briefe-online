@@ -2,7 +2,7 @@ import React from 'react';
 import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core';
 import 'typeface-roboto';
 import MenuIcon from "@material-ui/icons/Menu";
-
+import LetterCard from './components/LetterCard/LetterCard';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
 	    </Typography>
 	  </Toolbar>
 	</AppBar>
+	<LetterCard />
       </div>
   );
 }
