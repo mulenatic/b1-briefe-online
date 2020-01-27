@@ -45,6 +45,7 @@ export default class LetterCard extends Component {
 	      </CardActions>
 	      <Collapse in={this.state.expanded}>
 		<CardContent>
+		  <Typography variant="h4">Antwort</Typography>
 		  <Typography dangerouslySetInnerHTML={this.createMarkup(this.props.letterData.solution)}>
 		  </Typography>
 		</CardContent>
