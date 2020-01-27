@@ -20,12 +20,20 @@ export default class LetterCard extends Component {
     toggleExpanded = () => {
 	this.setState({ expanded: !this.state.expanded });
     };
-    
+
+    generateSubheader = (letterData) => {
+	const source = letterData.source ? letterData.source : '?';
+	const date = letterData.date ? letterData.date : '?';
+	
+	return `${source} - ${date}`;
+
+    };
+					  
 
     render() {
 	return (
-	    <Card>
-	      <CardHeader title={this.props.letterData.title}/>
+	    <Card variant="outlined">
+	      <CardHeader title={this.props.letterData.title} subheader={ this.generateSubheader(this.props.letterData) }/>
 	      <CardContent>
 		<Typography dangerouslySetInnerHTML={this.createMarkup(this.props.letterData.problem)}>
 		</Typography>

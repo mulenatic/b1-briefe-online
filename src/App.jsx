@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Typography, Container } from '@material-ui/core';
 import 'typeface-roboto';
 import MenuIcon from "@material-ui/icons/Menu";
 import LetterCard from './components/LetterCard/LetterCard';
@@ -48,8 +48,10 @@ class App extends Component {
 		  </Typography>
 		</Toolbar>
 	      </AppBar>
-	      {this.state.loading && <div>Loading...</div>}
-	      {!this.state.loading && this.createLetterCards(this.state.lettersData)}
+	      <Container maxWidth="sm">
+		{this.state.loading && <div>Loading...</div>}
+		{!this.state.loading && this.createLetterCards(this.state.lettersData)}
+	      </Container>
 	    </div>
 	);
     }
