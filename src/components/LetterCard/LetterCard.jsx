@@ -3,7 +3,7 @@ import { CardHeader, CardContent, Typography, Card, CardActions, IconButton, Col
 import { ExpandMore, ExpandLess } from "@material-ui/icons";
 
 const ExpandIcon = ({ expanded }) =>
-      !expanded ? <ExpandLess /> : <ExpandMore />;
+      expanded ? <ExpandLess /> : <ExpandMore />;
 
 export default class LetterCard extends Component {
 
